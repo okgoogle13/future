@@ -1,21 +1,32 @@
 # future
 
-A clean knowledge base extracted from Perplexity Space conversations.
+A lightweight discovery log for exploring AI tools and prototyping ideas.
+
+## Purpose
+
+Capture findings from exploration sessions — what works, what doesn't, and what to try next — without over-engineering the structure.
 
 ## Structure
 
 ```
-conversations/   ← raw Markdown exports from Perplexity Space threads
-interfaces/      ← reusable types, schemas, and interfaces derived from discussions
-guidance/        ← consolidated codebase rules and implementation patterns
+conversations/   ← raw notes and threads from discovery sessions
+interfaces/      ← minimal schemas and data shapes that emerged from exploration
+guidance/        ← practical patterns worth keeping, distilled from conversations
 ```
 
-## How to add a conversation
+## How to use
 
-1. Export the thread as Markdown (via MarkDownload or Perplexity's copy option)
-2. Save to `conversations/YYYY-MM-DD-topic-slug.md`
-3. Push via MCP `push_files` or standard `git commit`
+1. Drop a new discovery note into `conversations/YYYY-MM-DD-topic-slug.md`
+2. If a pattern or interface solidifies, move it into `guidance/` or `interfaces/`
+3. Keep entries short — capture the finding, not the full conversation
 
-## Workflow
+## Current focus
 
-Conversations → distilled into `guidance/` and `interfaces/` as patterns solidify.
+Exploring Google AI Studio (Build mode) as a one-off prototyping tool.
+
+Key findings so far:
+- AI Studio Build mode generates code + files with a **live preview pane** in-browser — no deployment needed for personal use
+- A single detailed prompt (system instructions + user message) is enough to produce a usable prototype
+- Optimise prompts for in-Studio preview: single app, self-contained mock data, no external services or auth
+- Prebuilt "remix" templates exist in the gallery as starting points
+- Deploy to Cloud Run is available if a shareable URL is ever needed later
